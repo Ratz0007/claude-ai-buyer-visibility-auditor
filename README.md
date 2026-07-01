@@ -14,17 +14,26 @@ An actual audit tool that scores whether your company is visible to AI — and w
 
 ## How to install
 
-### Option 1: Claude.ai (web)
-1. Download the .zip (or .skill) file
-2. Go to Claude.ai → Settings → Capabilities → Skills → Upload
-3. Activate the skill
+### Option 1: Claude Code (recommended, 10 seconds)
+Run this in your terminal:
 
-### Option 2: Claude Code (recommended for full power)
-1. Unzip this folder
-2. Copy the entire `ai-buyer-visibility-auditor/` folder into:
-   `~/.claude/skills/`
-3. Restart Claude Code if needed
-4. Just say: **"Audit our AI visibility"**
+```bash
+npx skills add Ratz0007/claude-ai-buyer-visibility-auditor
+```
+
+That's it. Restart Claude Code if it doesn't pick up automatically, then say: **"Audit our AI visibility"**
+
+### Option 2: Claude Code (manual)
+```bash
+git clone https://github.com/Ratz0007/claude-ai-buyer-visibility-auditor.git
+mv claude-ai-buyer-visibility-auditor ~/.claude/skills/
+```
+Restart Claude Code, then say: **"Audit our AI visibility"**
+
+### Option 3: Claude.ai (web)
+Skills upload in Claude.ai is currently limited. The easiest path: copy the contents of `SKILL.md` into your Project's custom instructions or paste into any chat as a system prompt.
+
+Then trigger with: **"Audit our AI visibility"**
 
 That's it. It runs the framework, not you.
 
